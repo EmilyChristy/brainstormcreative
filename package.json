@@ -1,9 +1,9 @@
 {
-  "name": "leohuynh.dev",
-  "version": "2.0.0",
+  "name": "brainstormcreative",
+  "version": "1.0.0",
   "scripts": {
     "start": "PORT=3435 next dev",
-    "dev": "PORT=3434 cross-env INIT_CWD=$PWD next dev",
+    "dev": "next dev -p 3434",
     "build": "cross-env INIT_CWD=$PWD next build && npm run postbuild",
     "postbuild": "cross-env NODE_OPTIONS='--experimental-json-modules' tsx ./scripts/post-build.ts",
     "serve": "next start",
