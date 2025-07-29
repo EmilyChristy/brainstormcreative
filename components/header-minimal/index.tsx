@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
 import { Container } from '~/components/ui/container'
 import { SITE_METADATA } from '~/data/site-metadata'
-import { MobileNav } from './mobile-nav'
+// import { MobileNav } from './mobile-nav'
 import { ThemeSwitcher } from './theme-switcher'
 
 let logged = false
@@ -59,7 +59,7 @@ export function HeaderMinimal() {
           <div className="flex items-center gap-2">
             <ThemeSwitcher />
             {/* <KbarSearchTrigger /> */}
-            <MobileNav />
+            {/* <MobileNav /> */}
           </div>
         </div>
       </div>
