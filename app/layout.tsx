@@ -11,20 +11,18 @@ import {
   Nunito,
   Playpen_Sans,
 } from 'next/font/google'
-import { UmamiAnalytics } from '~/components/analytics/umami'
-import { Footer } from '~/components/footer'
-import { Header } from '~/components/header'
-import { KBarSearchProvider } from '~/components/search/kbar-provider'
+import { HeaderMinimal } from '~/components/header-minimal'
+// import { UmamiAnalytics } from '~/components/analytics/umami'
 import { TiltedGridBackground } from '~/components/ui/tilted-grid-background'
 import { SITE_METADATA } from '~/data/site-metadata'
 import { ThemeProviders } from './theme-providers'
 
-const FONT_PLAYPEN_SANS = Playpen_Sans({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['800'],
-  variable: '--font-playpen-sans',
-})
+// const FONT_PLAYPEN_SANS = Playpen_Sans({
+//   subsets: ["latin"],
+//   display: "swap",
+//   weight: ["800"],
+//   variable: "--font-playpen-sans",
+// });
 
 const FONT_NUNITO = Nunito({
   subsets: ['latin'],
@@ -92,7 +90,9 @@ export let metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: { children: React.ReactNode }) {
+}: {
+  children: React.ReactNode
+}) {
   let basePath = process.env.BASE_PATH || ''
 
   return (
@@ -102,7 +102,7 @@ export default function RootLayout({
         'w-full overflow-x-hidden scroll-smooth',
         FONT_NUNITO.variable,
         FONT_JETBRAINS_MONO.variable,
-        FONT_PLAYPEN_SANS.variable,
+        // FONT_PLAYPEN_SANS.variable,
         FONT_GEIST.variable,
       )}
       suppressHydrationWarning
@@ -160,14 +160,14 @@ export default function RootLayout({
       >
         <TiltedGridBackground className="inset-x-0 top-0 z-[-1] h-[50vh]" />
         <ThemeProviders>
-          <UmamiAnalytics
+          {/* <UmamiAnalytics
             websiteId={SITE_METADATA.analytics.umamiAnalytics.websiteId}
-          />
-          <KBarSearchProvider configs={SITE_METADATA.search.kbarConfigs}>
-            <Header />
-            <main className="mb-auto grow">{children}</main>
-          </KBarSearchProvider>
-          <Footer />
+          /> */}
+          {/* <KBarSearchProvider configs={SITE_METADATA.search.kbarConfigs}> */}
+          <HeaderMinimal />
+          <main className="mb-auto grow">{children}</main>
+          {/* </KBarSearchProvider> */}
+          {/* <Footer /> */}
         </ThemeProviders>
         <SpeedInsights />
       </body>

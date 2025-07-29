@@ -1,34 +1,34 @@
 export const SITE_METADATA = {
-  title: `Leo's dev blog – stories, insights, and ideas`,
-  author: 'Leo Huynh',
-  headerTitle: `Leo's dev blog`,
+  title: 'Brainstorm Creative  - dev blog, insights, and ideas',
+  author: 'Emily Christy',
+  headerTitle: 'Brainstorm Creative',
   description:
-    'A personal space on the cloud where I document my programming journey, sharing lessons, insights, and resources for fellow developers.',
+    'A personal space where I document my software projects, sharing lessons, insights, and resources for fellow developers.',
   language: 'en-us',
   locale: 'en-US',
   stickyNav: true,
   theme: 'system', // system, dark or light
-  siteUrl: 'https://www.leohuynh.dev',
-  siteRepo: 'https://github.com/hta218/leohuynh.dev',
+  siteUrl: 'https://www.brainstormcreative.co.uk',
+  siteRepo: '',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.jpg`,
-  socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.jpeg`,
-  email: 'contact@leohuynh.dev',
-  github: 'https://github.com/hta218',
-  x: 'https://x.com/hta218_',
-  facebook: 'https://facebook.com/hta218',
-  youtube: 'https://www.youtube.com/@hta218_',
-  linkedin: 'https://www.linkedin.com/in/hta218',
-  threads: 'https://www.threads.net/hta218_',
-  instagram: 'https://www.instagram.com/hta218_',
-  goodreadsBookshelfUrl:
-    'https://www.goodreads.com/review/list/179720035-leo-huynh',
-  goodreadsFeedUrl: 'https://www.goodreads.com/review/list_rss/179720035',
-  imdbRatingsList: 'https://www.imdb.com/user/ur154483197/ratings/?view=grid',
+  socialBanner: `${
+    process.env.BASE_PATH || ''
+  }/static/images/twitter-card.jpeg`,
+  email: 'hello@brainstormcreative.co.uk',
+  github: '',
+  x: '',
+  facebook: '',
+  youtube: '',
+  linkedin: 'https://www.linkedin.com/in/iamemilychristy',
+  threads: '',
+  instagram: '',
+  goodreadsBookshelfUrl: '',
+  goodreadsFeedUrl: '',
+  imdbRatingsList: '',
   analytics: {
     umamiAnalytics: {
       websiteId: process.env.NEXT_UMAMI_ID,
-      shareUrl:
-        'https://analytics.leohuynh.dev/share/c9ErglxqzY5CQJ8g/leohuynh.dev',
+      shareUrl: '',
     },
   },
   newsletter: {

@@ -3,15 +3,9 @@
 import clsx from 'clsx'
 import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
-import { KbarSearchTrigger } from '~/components/search/kbar-trigger'
 import { Container } from '~/components/ui/container'
-import { GrowingUnderline } from '~/components/ui/growing-underline'
-import { Link } from '~/components/ui/link'
-import { HEADER_NAV_LINKS } from '~/data/navigation'
 import { SITE_METADATA } from '~/data/site-metadata'
-import { Logo } from './logo'
 import { MobileNav } from './mobile-nav'
-import { MoreLinks } from './more-links'
 import { ThemeSwitcher } from './theme-switcher'
 
 let logged = false
@@ -25,7 +19,7 @@ function logASCIItext() {
   logged = true
 }
 
-export function Header() {
+export function HeaderMinimal() {
   let pathname = usePathname()
   useEffect(logASCIItext, [])
 
@@ -38,25 +32,25 @@ export function Header() {
         SITE_METADATA.stickyNav ? 'sticky top-2 z-50 lg:top-3' : 'mt-2 lg:mt-3',
       )}
     >
-      <div className="flex items-center justify-between gap-3">
-        <Logo />
-        <div className="flex items-center gap-4">
-          <div className="hidden gap-1.5 sm:flex">
+      <div className="flex items-end justify-end gap-3">
+        {/* <Logo /> */}
+        <div className="flex items-end gap-4">
+          {/* <div className="hidden gap-1.5 sm:flex">
             {HEADER_NAV_LINKS.map(({ title, href }) => {
-              let isActive = pathname.startsWith(href)
+              let isActive = pathname.startsWith(href);
               return (
                 <Link key={title} href={href} className="px-3 py-1 font-medium">
                   <GrowingUnderline
-                    className={clsx(isActive && 'bg-size-[100%_50%]')}
-                    data-umami-event={`nav-${href.replace('/', '')}`}
+                    className={clsx(isActive && "bg-size-[100%_50%]")}
+                    data-umami-event={`nav-${href.replace("/", "")}`}
                   >
                     {title}
                   </GrowingUnderline>
                 </Link>
-              )
+              );
             })}
             <MoreLinks />
-          </div>
+          </div> */}
           <div
             data-orientation="vertical"
             role="separator"
@@ -64,7 +58,7 @@ export function Header() {
           />
           <div className="flex items-center gap-2">
             <ThemeSwitcher />
-            <KbarSearchTrigger />
+            {/* <KbarSearchTrigger /> */}
             <MobileNav />
           </div>
         </div>
